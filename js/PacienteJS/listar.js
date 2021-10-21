@@ -15,8 +15,6 @@ async function cargarDatos(){
         paciente.edad +
         "</th><td>" +
         paciente.cedula +
-        "</th><td>" +
-        paciente.urlImagen +
         "</th><td>" + '<center class="d-flex justify-content-center">' +
         '<a class="btn btn-info mr-3 px-3" href="verhistorial.html" role="button">Ver</a>'+ '<br>' +
         '<a class="btn btn-success" href="agregarhistorial.html" role="button">Agregar</a>'+
