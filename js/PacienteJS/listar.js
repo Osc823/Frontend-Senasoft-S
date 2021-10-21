@@ -17,10 +17,10 @@ async function cargarDatos(){
         paciente.cedula +
         "</th><td>" +
         paciente.urlImagen +
-        "</th><td>" +
-        '<a class="btn btn-info" href="verhistorial.html" role="button">Ver Historial</a>'+
-        '<a class="btn btn-success" href="agregarhistorial.html" role="button">Agregar Historial</a>'+
-        "</th></tr>";
+        "</th><td>" + '<center class="d-flex justify-content-center">' +
+        '<a class="btn btn-info mr-3 px-3" href="verhistorial.html" role="button">Ver</a>'+ '<br>' +
+        '<a class="btn btn-success" href="agregarhistorial.html" role="button">Agregar</a>'+
+        '</center>' +"</th></tr>";
 
         tabla.innerHTML += fila;
     });
