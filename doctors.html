@@ -85,7 +85,7 @@
 					<div class="row">
 						<div class="col-md-6">
 						<div class="form-group">
-						  <input type="text" class="form-control" placeholder="Nombres: " disabled>
+						  <input type="text" class="form-control" placeholder="Nombres: " disabled> <script>doctor.nombres</script>
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -158,6 +158,42 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+
+  <script>async function cargarDatos(){
+    const tabla  = document.getElementById("datosTabla");
+
+    const listaDoctores = await doctorService.listar();
+
+    listaDoctores.forEach((doctor) => {
+        let fila =
+        "<tr><th>" +
+        doctor.id +
+        "</th><td>" +
+        doctor.nombres+
+        "</th><td>" +
+        doctor.apellidos +
+        "</th><td>" +
+        doctor.cedula +
+        "</th><td>" +
+        doctor.clave +
+        "</th><td>" +
+        doctor.urlFirma +
+        "</th><td>" +
+        doctor.urlImagen +
+        "</th><td>" +
+        "</th></tr>";
+
+        tabla.innerHTML += fila;
+    });
+}
+
+    async function eliminar(id){
+        await doctorService.eliminar(id);
+        location.reload();
+    }
+    
+    cargarDatos();
+</script>
     
   </body>
 </html>
