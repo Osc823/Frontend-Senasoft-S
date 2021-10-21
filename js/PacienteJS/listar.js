@@ -18,6 +18,8 @@ async function cargarDatos(){
         "</th><td>" +
         paciente.urlImagen +
         "</th><td>" +
+        '<a class=btn btn-info" href="verhistorial.html" role="button">Ver Historial</a>'+
+        '<a class="btn btn-success" href="agregarhistorial.html" role="button">Agregar Historial</a>'+
         "</th></tr>";
 
         tabla.innerHTML += fila;
