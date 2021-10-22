@@ -23,12 +23,16 @@ async function cargarDatos(){
         "</th></tr>";
 
         tabla.innerHTML += fila;
+       
     });
 }
 
-    async function eliminar(id){
-        await doctorService.eliminar(id);
-        location.reload();
-    }
+   
+
     
+    
+   
     cargarDatos();
+
+   
+  
