@@ -1,3 +1,4 @@
+/*
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 const loginService = {
@@ -63,4 +64,4 @@ const loginService = {
     function login() {
       loginService.login();
     }
- 
+ */
