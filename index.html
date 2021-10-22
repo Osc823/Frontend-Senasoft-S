@@ -82,6 +82,7 @@
     </div>
   </section>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  
   <script>const loginService = {
       API: "http://localhost:8080/api/login",
       HEADERS: {
@@ -107,44 +108,51 @@
 
 
         if (respuesta.status === 403) {
-            swal({
-              title: "Error",
-              text: "DATOS INCORRECTOS Y/O VACIOS",
-              icon: "error", 
-              dangerMode: true,
-            })
-              .then((willDelete) => {
-                if (willDelete) {
-                  location.reload();
-                    return;
-                } 
-              });
+          swal({
+            title: "Error",
+            text: "DATOS INCORRECTOS Y/O VACIOS",
+            icon: "error",
+            dangerMode: true,
+          })
+            .then((willDelete) => {
+              if (willDelete) {
+                location.reload();
+                return;
+              }
+            });
         }
 
         const usuario = await respuesta.json();
         //alert("BIENVENIDO")
         swal({
-              title: "BIENVENIDO",
-              icon: "success", 
-              dangerMode: true,
-            })
-              .then((willDelete) => {
-                if (willDelete) {
-                  window.location.href = "doctors.html";
-                   return;
-                } 
-              });
-       
+          title: "BIENVENIDO",
+          icon: "success",
+          dangerMode: true,
+        })
+          .then((willDelete) => {
+            if (willDelete) {
+              window.location.href = "doctors.html";
+              return;
+            }
+          });
+
       }
 
 
 
 
+
+
     }
 
-    function login() {
-      loginService.login();
-    }
+
+    logout: () => {
+      localStorage.clear();
+    },
+
+      function login() {
+        loginService.login();
+      }
   </script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
