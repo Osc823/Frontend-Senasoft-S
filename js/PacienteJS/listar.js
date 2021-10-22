@@ -3,8 +3,9 @@ async function cargarDatos(){
 
     const listaPacientes = await pacienteService.listar();
 
+
     listaPacientes.forEach((paciente) => {
-        let fila =
+        let fila = 
         "<tr><th>" +
         paciente.id +
         "</th><td>" +
@@ -32,3 +33,5 @@ async function cargarDatos(){
     }
     
     cargarDatos();
+
+    
