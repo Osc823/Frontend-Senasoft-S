@@ -1,4 +1,3 @@
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 async function cargarDatos(){
     const tabla  = document.getElementById("datosTabla");
