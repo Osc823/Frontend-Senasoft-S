@@ -1,9 +1,13 @@
 async function cargarDatos(){
+    
+    
+
     const tabla  = document.getElementById("datosTabla");
 
     const listaHistoriales = await historialService.listar();
-
+    
     listaHistoriales.forEach((historial) => {
+       
         let fila =
         "<tr><th>" +
         historial.doctor.nombres +
@@ -12,9 +16,13 @@ async function cargarDatos(){
         "</th><td>" +
         '<a type="button" class="btn btn-primary" href="">Img.pdf</a>' +
         "</th></tr>";
-
+   
         tabla.innerHTML += fila;
+
     });
+
+
+   
 
     $(document).ready(function () {
         // Setup - add a text input to each footer cell
