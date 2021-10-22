@@ -1,3 +1,4 @@
+
 async function cargarDatos(){
     const tabla  = document.getElementById("datosTabla");
 
