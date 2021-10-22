@@ -82,12 +82,15 @@
     </div>
   </section>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-  <script>const loginService = {
+  
+  <script>
+  const loginService = {
       API: "http://localhost:8080/api/login",
       HEADERS: {
         "Content-Type": "application/json",
       },
+
+
 
       async login() {
 
@@ -120,10 +123,12 @@
                 return;
               }
             });
+
+          
         }
 
         const usuario = await respuesta.json();
-        //alert("BIENVENIDO")
+        
         swal({
           title: "BIENVENIDO",
           icon: "success",
@@ -144,13 +149,10 @@
 
 
     }
-
-
-   
-
-      function login() {
+    function login() {
         loginService.login();
       }
+
   </script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
