@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>DentaCare - Free Bootstrap 4 Template by Colorlib</title>
+  <title>SALUD SOFT</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -53,25 +53,25 @@
             <h2 class="mb-2 text-center">SALUD SOFT</h2>
             <h2 class="mb-2 text-center">INICIAR SESION</h2>
           </div>
-          <form action="doctors.html" class="ftco-animate">
+          <form class="ftco-animate">
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
                   <br><br>
-                  <input type="text" class="form-control" placeholder="Numero Documento">
+                  <input type="text" class="form-control" id="cedula" name="cedula" placeholder="Numero Documento" required>
                 </div>
               </div>
               <div class="col-md-12">
                 <div class="form-group">
                   <br>
-                  <input type="password" class="form-control" placeholder="Clave">
+                  <input type="password" class="form-control" id="clave" name="clave" placeholder="Clave" required>
                 </div>
               </div>
               <div class="col-md-12">
                 <div class="form-group">
                   <center>
                     <br><br>
-                    <input type="submit" value="Iniciar Sesion" class="btn btn-primary py-3 px-5">
+                    <button type="button" onclick="login()" class="btn btn-primary py-3 px-5">Iniciar Sesion</button>
                   </center>
                 </div>
               </div>
@@ -95,10 +95,8 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/Login/login.js"></script>
 
 </body>
 
