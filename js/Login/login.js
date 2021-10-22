@@ -23,12 +23,13 @@ const loginService = {
 
 
         if (respuesta.status === 403) {
+            alert("CAMPOS VACIOS Y/O INCORRECTOS")
             location.reload();
             return;
         }
 
         const usuario = await respuesta.json();
-
+           alert("BIENVENIDO")
         window.location.href = "doctors.html";
         return;
 
